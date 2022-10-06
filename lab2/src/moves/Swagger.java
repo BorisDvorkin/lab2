@@ -8,9 +8,13 @@ public class Swagger extends StatusMove {
     }
 
     @Override
+    protected void applySelfEffects(Pokemon p) {
+        p.setMod(Stat.ATTACK, 2);
+    }
+    
+    @Override
     protected void applyOppEffects(Pokemon p) {
         p.confuse();
-        p.setMod(Stat.ATTACK, 2);
     }
 
     @Override
